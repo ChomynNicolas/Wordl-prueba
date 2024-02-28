@@ -13,6 +13,7 @@ const palabra =
 let numPal = palabra.length;
 let resAnt;
 
+
 const PRESION = document.getElementById("guess-button");
 const GRID = document.getElementById("grid");
 const INPUT = document.getElementById("guess-input");
@@ -32,6 +33,12 @@ function intentar() {
   const ROW = document.createElement("div");
   ROW.className = "row";
   const RESP = dato();
+  if (RESP === palabra) {
+    terminar("<h1>GANASTE!</h1>");
+    JUGAR.style.display = "block";
+    PRESION.style.display = "none";
+    
+  }
   if (RESP.length !== numPal) {
     error.innerHTML = "<h1>*Completar todas las letras</h1>";
     error.style = "color: red";
@@ -60,19 +67,15 @@ function intentar() {
     ROW.appendChild(SPAN);
   }
 
+  
+  GRID.appendChild(ROW);
   if (intentos == 0) {
     terminar("<h1>PERDISTE!</h1>");
     JUGAR.style.display = "block";
     PRESION.style.display = "none";
     return;
   }
-  GRID.appendChild(ROW);
-  if (RESP === palabra) {
-    terminar("<h1>GANASTE!</h1>");
-    JUGAR.style.display = "block";
-    PRESION.style.display = "none";
-    return;
-  }
+  
   resAnt = RESP;
 }
 
