@@ -33,7 +33,7 @@ button:active {
   border: 1px solid rgb(67, 82, 2);
   padding: 3px;
   margin: 3px;
-  margin-bottom: 20px; 
+  
   width: 30px;
   height: 20px;
   text-align: center;
@@ -43,8 +43,8 @@ button:active {
   
 }
 .row {
-  margin-bottom: 20px; 
-  text-align: center;
+  margin-bottom: 5px;
+  /* text-align: center; */
 }
 
 .input-area {
@@ -53,10 +53,9 @@ button:active {
 
 #grid{
   display: grid;
-  grid-template-rows: 33px 33px 33px 33px 33px;
   text-align: center;
   margin-bottom: 10px; 
-  margin-top: 10px;
+  margin-top: 20px;
    
  
 }

@@ -37,6 +37,7 @@ function intentar() {
     terminar("<h1>GANASTE!</h1>");
     JUGAR.style.display = "block";
     PRESION.style.display = "none";
+    intentos++;
     
   }
   if (RESP.length !== numPal) {
