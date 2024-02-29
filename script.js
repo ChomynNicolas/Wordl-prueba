@@ -44,17 +44,17 @@ function intentar() {
     error.style = "color: red";
     return;
   } else error.style.display = "none";
-  intentos--;
   if(resAnt===RESP){
     error.innerHTML = "<h1>*Ingrese otra palabra</h1>";
     error.style = "color: red";
     return;
   } else error.style.display = "none";
-
+  intentos--;
 
   for (i in palabra) {
     const SPAN = document.createElement("span");
     SPAN.className = "letter";
+    
 
     if (palabra.includes(RESP[i])) {
       if (RESP[i] === palabra[i]) {
